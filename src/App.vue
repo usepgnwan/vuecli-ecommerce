@@ -1,12 +1,12 @@
 <template>
   <div id="app"> 
       <router-view></router-view> 
-      <FooterView />
+      <!-- <FooterView /> -->
   </div>
 </template>
 
-<script>
-import FooterView from "@/components/FooterView.vue";
+<!-- <script>
+// import FooterView from "@/components/FooterView.vue";
 export default ((await import('vue')).defineComponent({
   components: {
     FooterView
@@ -26,4 +26,4 @@ export default ((await import('vue')).defineComponent({
   //   console.log(this.checkFooter)
   // }
 }));
-</script>
+</script> -->

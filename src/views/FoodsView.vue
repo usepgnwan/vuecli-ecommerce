@@ -26,16 +26,17 @@
                 </div>
             </div>
         </div>
+        <FooterView />
     </div>
 </template>
 
 <script>
 import MyNavbar from '@/components/MyNavbar.vue';
+import FooterView from "@/components/FooterView.vue";
 import CardProduct from "@/components/CardProduct.vue";
 import axios from "axios";
 import NProgress from 'nprogress';
-import 'nprogress/nprogress.css';
-
+import 'nprogress/nprogress.css'; 
 // Start NProgress before each request
 axios.interceptors.request.use((config) => {
   NProgress.start();
@@ -51,7 +52,8 @@ export default {
     name: "FoodsView",
     components : {
         MyNavbar,
-        CardProduct
+        CardProduct,
+        FooterView
     },
     data(){
         return {
@@ -76,6 +78,7 @@ export default {
                 this.setProduct(response.data)  
             })
             .catch((err) => {
+                console.log('error')
                 console.log(err)
             })
         }
@@ -90,6 +93,7 @@ export default {
         //    console.log(typeof(response))
         })
         .catch((err) => {
+            console.log('error')
             console.log(err)
         })
 

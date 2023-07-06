@@ -20,7 +20,8 @@
                     <CardProduct :product="product"/>
                 </div>
             </div>
-        </div> 
+        </div>         
+        <FooterView />
     </div>
 </template>
 
@@ -28,6 +29,9 @@
 import MyNavbar from "@/components/MyNavbar.vue";
 import HeroView from "@/components/HeroView.vue";
 import CardProduct from "@/components/CardProduct.vue";
+
+
+import FooterView from "@/components/FooterView.vue";
 import axios from "axios";
 
 export default ((await import('vue')).defineComponent({
@@ -36,6 +40,7 @@ export default ((await import('vue')).defineComponent({
         MyNavbar,
         HeroView,
         CardProduct,
+        FooterView
     },
     data(){
         return {
