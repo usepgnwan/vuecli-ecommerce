@@ -1,0 +1,33 @@
+#app{
+    font-family: 'Montserrat', sans-serif; 
+}
+.router-link-exact-active {
+    font-weight: bold;
+}
+
+#nprogress .bar {
+background: #8c1ebb !important;
+}
+  
+#nprogress .peg {
+box-shadow: 0 0 10px #8c1ebb, 0 0 5px #8c1ebb;
+}
+
+#nprogress .spinner-icon {
+border-top-color: #8c1ebb;
+border-left-color: #8c1ebb;
+}
+
+.btn-success{
+    background: #4EB883;
+}
+.badge-success{
+    background: #4EB883;
+} 
+.card-product{
+    border-radius: 15px;
+}
+.card-img-top{
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
