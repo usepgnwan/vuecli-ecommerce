@@ -32,7 +32,7 @@ import CardProduct from "@/components/CardProduct.vue";
 
 
 import FooterView from "@/components/FooterView.vue";
-import axios from "axios";
+
 
 export default ((await import('vue')).defineComponent({
     name: 'HomeView',
@@ -56,7 +56,8 @@ export default ((await import('vue')).defineComponent({
     mounted() {
         // let x = document.querySelector('.xxx').innerHTML;
         // alert(x)
-        axios
+        document.title = 'Home';
+        this.$axios
         .get("http://localhost:3000/best-products")
         .then((response) => {
            this.setProduct(response.data) 

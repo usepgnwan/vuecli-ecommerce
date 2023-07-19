@@ -23,7 +23,7 @@
                         <router-link class="nav-link" to="/keranjang">
                             Keranjang
                             <b-icon icon="bag" aria-hidden="true"></b-icon>
-                            <span class="badge badge-success ml-2"> 0 </span>
+                            <span class="badge badge-success ml-2">  {{ updateKeranjang ? updateKeranjang.length : jumlah_pesanan.length }} </span>
                         </router-link>
                     </li> 
                   </ul>
@@ -35,7 +35,29 @@
 
 <script>
 export default {
-    name:'MyNavbar'
+    name:'MyNavbar',
+    props: ['updateKeranjang'],
+    data() {
+      return {
+        jumlah_pesanan : []
+      }
+    },
+    methods:{
+      setPesanan($data){
+        this.jumlah_pesanan = $data;
+      }
+    },
+    mounted() {
+      this.$axios
+        .get("http://localhost:3000/keranjangs")
+        .then((response) => {
+           this.setPesanan(response.data) 
+           console.log(typeof(response))
+        })
+        .catch((err) => {
+            console.log(err)
+        });
+    }
 }
 </script>
 

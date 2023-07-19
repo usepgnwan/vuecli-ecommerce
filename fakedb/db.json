@@ -99,28 +99,15 @@
       "gambar": "lontong-opor-ayam.jpg"
     }
   ],
-  "keranjangs": [
-    {
-      "jumlah_pemesanan": "1",
-      "products": {
-        "id": 2,
-        "kode": "K-02",
-        "nama": "Nasi Goreng Telur",
-        "harga": 14000,
-        "is_ready": true,
-        "gambar": "nasi-goreng-telor.jpg"
-      },
-      "id": 1
-    }
-  ],
+  "keranjangs": [],
   "pesanans": [
     {
-      "nama": "Afif",
-      "noMeja": "3",
+      "nama": "sss",
+      "noMeja": "sdsd",
       "keranjangs": [
         {
-          "jumlah_pemesanan": "1",
-          "keterangan": "Pedes",
+          "jumlah_pesanan": "323",
+          "keterangan": "dsds",
           "products": {
             "id": 1,
             "kode": "K-01",
@@ -132,7 +119,8 @@
           "id": 1
         },
         {
-          "jumlah_pemesanan": "1",
+          "jumlah_pesanan": "232",
+          "keterangan": "wdsd",
           "products": {
             "id": 2,
             "kode": "K-02",

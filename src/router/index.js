@@ -15,10 +15,6 @@ const page = (path) => import(`../views/${path}.vue`);
 
 const routes = [
   {
-    path: '*',
-    component:  NotFound
-  },
-  {
     path: '/',
     name: 'home',
     component: HomeView
@@ -37,6 +33,27 @@ const routes = [
     name: 'foods',
     component : () => import('../views/FoodsView.vue')
   }
+  ,
+  {
+    path: '/foods/:id',
+    name: 'foodsdetail',
+    component : () => page('FoodsDetailView')
+  },
+  {
+    path: '*',
+    name : "404",
+    component:  NotFound
+  },
+  {
+    path: '/keranjang',
+    name: 'keranjang',
+    component : () => page('KeranjangView')
+  },
+  {
+    path: '/Pesanan/sukses',
+    name: 'Pesanansukses',
+    component : () => page('PesananSuksesView')
+  },
 ]
 
 const router = new VueRouter({
